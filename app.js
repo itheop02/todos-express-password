@@ -49,6 +49,7 @@ app.use(function(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/', authRouter);
+app.use('/gdpr', require('./integration/gdpr.route'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
